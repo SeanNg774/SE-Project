@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Student</title>
+
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/admin-register-stu.css">
+  </head>
+
+  <body>
+    <div class="main-border">
+      <h1 class="reg-title">Registration</h1>
+
+      <div class="inner-layout">
+        <div class="inner-input-layout">
+          <label for="stuName">Student name:</label>
+          <input type="text" id="stuName">
+
+          <label for="stuIC">Student IC:</label>
+          <input type="text" id="stuIC">
+
+          <label for="stuID">Student ID:</label>
+          <input type="text" id="stuID">
+
+          <label for="dob">Date of birth:</label>
+          <input type="date" id="dob">
+
+          <label for="sex">Sex:</label>
+          <select id="sex">
+            <option value="M">M</option>
+            <option value="F">F</option>
+          </select>
+
+          <label for="stuClass">Class:</label>
+          <select id="stuClass">
+            <option value="a">1A</option>
+            <option value="b">1B</option>
+            <option value="c">1C</option>
+          </select>
+
+          <label for="parName">Parent name:</label>
+          <input type="text" id="parName">
+
+          <label for="parID">Parent ID:</label>
+          <input type="text" id="parID">
+
+          <label for="email">Email:</label>
+          <input type="email" id="email">
+
+          <label for="address">Address:</label>
+          <textarea id="address" rows="4" cols="50"></textarea>
+
+          <label for="password">Password:</label>
+          <input type="password" id="password">
+        </div>
+        
+        <button id="save-button" class="save-button">Save</button>
+      </div>
+
+      <a id="return-home" class="return-home" href="mainpageadmin.html">
+        <u>Return to Home</u>
+      </a>
+    </div>
+
+    <script src="/javascript/admin-register-stu.js"></script>
+  </body>
+</html>
