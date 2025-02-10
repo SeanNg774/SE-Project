@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('/images/ABC-login-wallpaper.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .main-border{
+    min-width: 700px;
+    max-width: 1000px;
+    min-height: 500px;
+    max-height: 800px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 73px;
+    text-align: center;
+  }

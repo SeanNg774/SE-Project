@@ -1,0 +1,55 @@
+.main-border{
+  display: flex;
+  flex-direction: column;
+}
+
+.inner-layout{
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  width: 400px;
+  height: 300px;
+  padding: 50px;
+  padding-bottom: 10px;
+  padding-left: 100px;
+  text-align: left;
+  overflow-y: auto;
+
+}
+
+.option-button{
+  background-color: rgb(235, 243, 115);
+  border-width: 1.5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 200px;
+  height: 40px;
+  text-align: left;
+
+  transition: padding-left 0.3s, font-weight 0.3s;
+}
+
+.option-button:hover{
+  padding-left: 30px;
+  font-weight: bold;
+}
+
+.option-button:active{
+  opacity: 0.6;
+}
+
+.logout-link{
+  color: rgb(0, 81, 255);
+  cursor: pointer;
+  text-align: left;
+  font-size: small;
+  margin-left: 100px;
+
+  transition: color 0.15s;
+}
+
+.logout-link:hover{
+  color:rgb(5, 5, 207);
+}
