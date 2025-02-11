@@ -1,0 +1,14 @@
+to run the file type these on bash vs code terminal
+
+also install python django on vs code with 
+
+cd kindergarten
+python manage.py migration
+python manage.py migrate
+
+
+
+pyhton manage.py runserver
+
+
+then go to http://127.0.0.1:8000/admin and type username ngs70 password Lol9598sean.
