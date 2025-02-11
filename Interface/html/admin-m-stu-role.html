@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Student Role</title>
+
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/admin-m-stu-role.css">
+    <link rel="stylesheet" href="/css/save-button.css">
+    <link rel="stylesheet" href="/css/return-home-link.css">
+  </head>
+
+  <body>
+    <div class="main-border">
+      <h1>User Roles</h1>
+
+      <div class="inner-layout">
+        <h2>Assign Role</h2>
+        <form>
+          <input type="text" placeholder="Enter User ID" id="userID" name="userID">
+
+          <label for="role">Assign Role:</label>
+          <select id="role" name="role">
+            <option value="admin">Admin</option>
+            <option value="accountant">Accountant</option>
+            <option value="teacher">Teacher</option>
+            <option value="parent">Parent</option>
+          </select>
+
+          <input type="submit" value="Save" class="save-button">
+        </form>
+
+        <h3>Edit Roles</h3>
+
+        <form>
+          <label for="role">Select Role:</label>
+          <select id="role" name="role">
+            <option value="admin">Admin</option>
+            <option value="accountant">Accountant</option>
+            <option value="teacher">Teacher</option>
+            <option value="parent">Parent</option>
+          </select>
+
+          <label for="roleName">Role Name:</label>
+          <input type="text" id="roleName" name="roleName">
+
+          <label for="roleDesc">Role Description:</label>
+          <textarea id="roleDesc" name="roleDesc" rows="4" cols="50"></textarea>
+
+          <input type="submit" value="Save" class="save-button">
+        </form>
+
+      
+      </div>
+
+      <a id="return-home" class="return-home" href="mainpageadmin.html">
+        <u>Return to Home</u>
+      </a>
+    </div>
+
+    <script src="/javascript/admin-m-stu-role.js"></script>
+  </body>
+</html>

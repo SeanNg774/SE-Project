@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Student Role</title>
+
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/admin-m-user-access.css">
+    <link rel="stylesheet" href="/css/save-button.css">
+    <link rel="stylesheet" href="/css/return-home-link.css">
+  </head>
+
+  <body>
+    <div class="main-border">
+      <h1>User Access</h1>
+
+      <div class="inner-layout">
+        <form>
+          <label for="role">Select Role:</label>
+          <select id="role" name="role">
+            <option value="admin">Admin</option>
+            <option value="accountant">Accountant</option>
+            <option value="teacher">Teacher</option>
+            <option value="parent">Parent</option>
+          </select>
+          
+          <div class="section-1">
+            <label for="accessPerm">Access Permissions:</label>
+            <p>Allow this role to:</p>
+            <div>
+              <input type="checkbox" id="opt1" name="opt1" value="viewFees">
+              <label for="opt1" class="option-label">View Fees</label>
+            </div>
+            
+            <div>
+              <input type="checkbox" id="opt2" name="opt2" value="makePay">
+              <label for="opt2" class="option-label">Make Payment</label>
+            </div>
+            
+            <div>
+              <input type="checkbox" id="opt3" name="opt3" value="editStuDet">
+              <label for="opt3" class="option-label">Edit Student Details</label>
+            </div>
+            
+          </div>
+          
+
+          <input type="submit" value="Save" class="save-button">
+        </form>
+
+      
+      </div>
+
+      <a id="return-home" class="return-home" href="mainpageadmin.html">
+        <u>Return to Home</u>
+      </a>
+    </div>
+
+    <script src="/javascript/admin-m-user-access.js"></script>
+  </body>
+</html>
