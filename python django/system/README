@@ -1,6 +1,6 @@
 to run the file type these on bash vs code terminal
 
-also install python django on vs code with 
+also install python django on vs code (ask chatgpt)
 
 cd kindergarten
 python manage.py migration
