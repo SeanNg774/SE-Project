@@ -14,21 +14,21 @@
         
         <div class="inner-layout">
             <div class="search-filters">
-                <input type="text" id="searchInput" placeholder="Search by Student Name or ID">
-                <button type="button" class="search-button">Search</button>
-                <div class="filter">
-                    <label for="classSection">Filters:</label>
-                    <select id="classSection">
-                        <option value="">Class Section</option>
-                        <option value="1A">1A</option>
-                        <option value="1B">1B</option>
-                        <option value="1C">1C</option>
-                    </select>
-                    <input type="date" id="dateFilter">
-                </div>
+                <input type="search" class="search-input" id="searchInput" placeholder="Search by Student Name or ID">
+                <button type="button" class="search-button" id="searchButton">Search</button>
             </div>
 
-            <table>
+            <div class="filter">
+                <label for="classSection">Filters:</label>
+                <select id="classSection">
+                    <option value="">Class Section</option>
+                    <option value="1A">1A</option>
+                    <option value="1B">1B</option>
+                    <option value="1C">1C</option>
+                </select>
+                <input type="date" id="dateFilter">
+            </div>
+            <table id="paymentTable">
                 <thead>
                     <tr>
                         <th>Student Name</th>

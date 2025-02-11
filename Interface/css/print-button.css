@@ -1,0 +1,15 @@
+.print-button{
+    max-width: 100px;
+    background-color: rgb(151, 207, 188);
+    margin-left: 400px;
+
+    transition: opacity 0.15s;
+}
+
+.print-button:hover{
+    opacity: 0.9;
+}
+
+.print-button:active{
+    opacity: 0.5;
+}

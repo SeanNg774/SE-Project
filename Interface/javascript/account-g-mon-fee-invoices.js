@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const generateButton = document.getElementById('generateButton');
+    const generateButton = document.getElementById('generate-button');
     const printButton = document.getElementById('printButton');
     const invoiceTable = document.getElementById('invoiceTable');
     const monthInput = document.getElementById('month');
@@ -28,16 +28,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     generateButton.addEventListener('click', filterData);
 
-    printButton.addEventListener('click', () => {
-        html2canvas(invoiceTable, {
-            scrollY: -window.scrollY,
-            windowWidth: window.innerWidth,
-            height: invoiceTable.offsetHeight
-        }).then(canvas => {
-            const imgData = canvas.toDataURL('image/png');
-            const pdf = new jspdf.jsPDF();
-            pdf.addImage(imgData, 'PNG', 0, 0, pdf.internal.pageSize.width, pdf.internal.pageSize.height);
-            pdf.save('invoice.pdf');
+    printButton.addEventListener("click", () => {
+        const { jsPDF } = window.jspdf; 
+        const doc = new jsPDF();
+
+        if (typeof doc.autoTable !== "function") {
+            console.error("Error: autoTable plugin is not loaded.");
+            return;
+        }
+
+        doc.text("Fee Invoice", 14, 10); // Add title
+
+        doc.autoTable({
+            html: "#invoiceTable",
+            startY: 20,
+            theme: "grid",
+            styles: { fontSize: 10, cellPadding: 3 },
+            headStyles: { fillColor: [151, 207, 188] },
         });
+
+        doc.save("invoice.pdf");
     });
 });

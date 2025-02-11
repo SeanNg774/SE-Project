@@ -1,50 +1,59 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const generateButton = document.getElementById('generateButton');
+    const generateButton = document.getElementById('generate-button');
     const printButton = document.getElementById('printButton');
     const reportTypeInput = document.getElementById('reportType');
     const dateFilterInput = document.getElementById('dateFilter');
     const reportTable = document.getElementById('reportTable');
 
-    const filterData = () => {
-        const reportTypeValue = reportTypeInput.value;
-        const dateValue = dateFilterInput.value;
-        const rows = reportTable.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+    if (!generateButton || !printButton || !reportTable) {
+        console.error("Missing required elements in the DOM.");
+        return;
+    }
 
-        for (let i = 0; i < rows.length; i++) {
-            const cells = rows[i].getElementsByTagName('td');
+    const filterData = () => {
+        const reportTypeValue = reportTypeInput.value.trim();
+        const dateValue = dateFilterInput.value;
+        const rows = reportTable.querySelectorAll("tbody tr");
+
+        rows.forEach(row => {
+            const cells = row.getElementsByTagName("td");
             let match = true;
 
-            if (dateValue && cells[5].textContent.split(' ')[0] !== dateValue.split(' ')[0]) {
-                match = false;
+            // Check date filter
+            if (dateValue) {
+                const dueDate = cells[5]?.textContent.trim();
+                const formattedDate = new Date(dueDate).toISOString().split("T")[0];
+
+                if (dateValue !== formattedDate) {
+                    match = false;
+                }
             }
 
-            // Add more conditions based on report type if needed
-            // if (reportTypeValue && !cells[X].textContent.includes(reportTypeValue)) {
-            //     match = false;
-            // }
-
-            rows[i].style.display = match ? '' : 'none';
-        }
+            row.style.display = match ? "" : "none";
+        });
     };
 
-    generateButton.addEventListener('click', filterData);
+    generateButton.addEventListener("click", filterData);
 
-    printButton.addEventListener('click', () => {
-        // Check if html2canvas and jspdf are available
-        if (typeof html2canvas === 'undefined' || typeof jspdf === 'undefined') {
-            alert('Please include html2canvas and jspdf libraries.');
+    printButton.addEventListener("click", () => {
+        if (typeof window.jspdf === "undefined" || typeof window.jspdf.jsPDF === "undefined") {
+            alert("Please ensure jsPDF and AutoTable are properly included.");
             return;
         }
 
-        html2canvas(reportTable, {
-            scrollY: -window.scrollY,
-            windowWidth: window.innerWidth,
-            height: reportTable.offsetHeight
-        }).then(canvas => {
-            const imgData = canvas.toDataURL('image/png');
-            const pdf = new jspdf.jsPDF();
-            pdf.addImage(imgData, 'PNG', 0, 0, pdf.internal.pageSize.width, pdf.internal.pageSize.height);
-            pdf.save('report.pdf');
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        doc.text("Fee Report", 14, 10);
+
+        doc.autoTable({
+            html: "#reportTable",
+            startY: 20,
+            theme: "grid",
+            styles: { fontSize: 10, cellPadding: 3 },
+            headStyles: { fillColor: [151, 207, 188] },
         });
+
+        doc.save("report.pdf");
     });
 });

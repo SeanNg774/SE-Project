@@ -14,23 +14,24 @@
         
         <div class="inner-layout">
             <div class="search-filters">
-                <input type="text" id="searchInput" placeholder="Search by Student Name or ID">
+                <input type="search" id="searchInput" placeholder="Search by Student Name or ID">
                 <button type="button" id="searchButton">Search</button>
-                <div class="filter">
-                    <label for="classSection">Filters:</label>
-                    <select id="classSection">
-                        <option value="">Class Section</option>
-                        <option value="1A">1A</option>
-                        <option value="1B">1B</option>
-                        <option value="1C">1C</option>
-                    </select>
-                    <select id="feeType">
-                        <option value="">Fee Type</option>
-                        <option value="Tuition">Tuition</option>
-                        <option value="Books">Books</option>
-                    </select>
-                </div>
+                
                 <button type="button" id="manageButton">Manage/Edit Records</button>
+            </div>
+            <div class="filter">
+                <label for="classSection">Filters:</label>
+                <select id="classSection">
+                    <option value="">Class Section</option>
+                    <option value="1A">1A</option>
+                    <option value="1B">1B</option>
+                    <option value="1C">1C</option>
+                </select>
+                <select id="feeType">
+                    <option value="">Fee Type</option>
+                    <option value="Tuition">Tuition</option>
+                    <option value="Books">Books</option>
+                </select>
             </div>
             <table id="feeRecordsTable">
                 <thead>
@@ -81,35 +82,53 @@
             <span class="close">&times;</span>
             <h2>Add New Fee Record</h2>
             <form id="feeRecordForm">
-                <label for="studentName">Student Name:</label>
-                <input type="text" id="studentName" required>
+                <div>
+                    <label for="studentName">Student Name:</label>
+                    <input type="text" id="studentName" required>
+                </div>                
 
-                <label for="studentId">Student ID:</label>
-                <input type="text" id="studentId" required>
+                <div>
+                    <label for="studentId">Student ID:</label>
+                    <input type="text" id="studentId" required>
+                </div>
 
-                <label for="class">Class:</label>
-                <input type="text" id="class" required>
+                <div>
+                    <label for="class">Class:</label>
+                    <input type="text" id="class" required>
+                </div>
 
-                <label for="feeType">Fee Type:</label>
-                <select id="feeType">
-                    <option value="Tuition">Tuition</option>
-                    <option value="Books">Books</option>
-                </select>
+                <div>
+                    <label for="feeType">Fee Type:</label>
+                    <select id="feeType">
+                        <option value="Tuition">Tuition</option>
+                        <option value="Books">Books</option>
+                    </select>
+                </div>
 
-                <label for="amount">Amount:</label>
-                <input type="number" id="amount" step="0.01" required>
+                <div>
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" step="0.01" required>
+                </div>
+                
 
-                <label for="dueDate">Due Date:</label>
-                <input type="date" id="dueDate" required>
+                <div>
+                    <label for="dueDate">Due Date:</label>
+                    <input type="date" id="dueDate" required>
+                </div>
+                
 
-                <label for="status">Status:</label>
-                <select id="status">
-                    <option value="Paid">Paid</option>
-                    <option value="Overdue">Overdue</option>
-                </select>
-
-                <button type="submit" class="save-button">Save</button>
-                <button type="button" id="cancelButton">Cancel</button>
+                <div>
+                    <label for="status">Status:</label>
+                    <select id="status">
+                        <option value="Paid">Paid</option>
+                        <option value="Overdue">Overdue</option>
+                    </select>
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit" class="save-button">Save</button>
+                    <button type="button" id="cancelButton">Cancel</button>
+                </div> 
             </form>
         </div>
     </div>

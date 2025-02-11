@@ -4,8 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generate Monthly Fee Invoices</title>
     <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/account-g-m-fee-invoices.css">
-    <link rel="stylesheet" href="/css/save-button.css">
+    <link rel="stylesheet" href="/css/account-g-mon-fee-invoices.css">
+    <link rel="stylesheet" href="/css/print-button.css">
     <link rel="stylesheet" href="/css/return-home-link.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
         <h1>Generate Monthly Fee Invoices</h1>
 
         <div class="inner-layout">
-            <div class="filters">
+            <form>
                 <label for="month">Filters:</label>
                 <input type="date" id="month">
                 <label for="feeType">Fee Type:</label>
@@ -21,10 +21,10 @@
                     <option value="Tuition">Tuition</option>
                     <option value="Books">Books</option>
                 </select>
-                <button type="button" class="generate-button">Generate Fee Invoice</button>
-            </div>
+                <button type="button" id="generate-button">Generate Fee Invoice</button>
+            </form>
 
-            <table>
+            <table id="invoiceTable">
                 <thead>
                     <tr>
                         <th>Student Name</th>
@@ -57,6 +57,8 @@
                     </tr>
                 </tbody>
             </table>
+
+            <button class="print-button" id="printButton">Print Invoice</button>
         </div>
 
         <a id="return-home" class="return-home" href="mainpageaccount.html">
@@ -64,6 +66,8 @@
         </a>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
     <script src="/javascript/account-g-mon-fee-invoices.js"></script>
 </body>
 </html>

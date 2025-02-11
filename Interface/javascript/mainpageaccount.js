@@ -2,8 +2,8 @@ function gFeeReports() {
     window.location.href = "account-g-fee-reports.html";
 }
 
-function gMonFeeRecord() {
-    window.location.href = "account-g-mon-fee-record.html";
+function gMonFeeInvoices() {
+    window.location.href = "account-g-mon-fee-invoices.html";
 }
 
 function mFeeRecord() {
