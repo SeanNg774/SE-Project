@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Monthly Fee Invoices</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/account-g-m-fee-invoices.css">
+    <link rel="stylesheet" href="/css/save-button.css">
+    <link rel="stylesheet" href="/css/return-home-link.css">
+</head>
+<body>
+    <div class="main-border">
+        <h1>Generate Monthly Fee Invoices</h1>
+
+        <div class="inner-layout">
+            <div class="filters">
+                <label for="month">Filters:</label>
+                <input type="date" id="month">
+                <label for="feeType">Fee Type:</label>
+                <select id="feeType">
+                    <option value="Tuition">Tuition</option>
+                    <option value="Books">Books</option>
+                </select>
+                <button type="button" class="generate-button">Generate Fee Invoice</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Student ID</th>
+                        <th>Class</th>
+                        <th>Fee Type</th>
+                        <th>Total Fees</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ahmad Rizal</td>
+                        <td>001</td>
+                        <td>1A</td>
+                        <td>Tuition</td>
+                        <td>$250</td>
+                        <td>2025-01-01</td>
+                        <td>Paid</td>
+                    </tr>
+                    <tr>
+                        <td>Adam Smith</td>
+                        <td>002</td>
+                        <td>1A</td>
+                        <td>Books</td>
+                        <td>$100</td>
+                        <td>2025-01-01</td>
+                        <td>Overdue</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <a id="return-home" class="return-home" href="mainpageaccount.html">
+            <u>Return to Home</u>
+        </a>
+    </div>
+
+    <script src="/javascript/account-g-mon-fee-invoices.js"></script>
+</body>
+</html>

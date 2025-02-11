@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Fee Status</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/teacher-view-fee-status.css">
+    <link rel="stylesheet" href="/css/save-button.css">
+    <link rel="stylesheet" href="/css/return-home-link.css">
+</head>
+<body>
+    <div class="main-border">
+        <h1>View Fee Status</h1>
+        <div class="inner-layout">
+            <div class="search-filters">
+                <input type="text" id="searchInput" placeholder="Search by Student Name or ID">
+                <button type="button" id="searchButton">Search</button>
+                <div class="filter">
+                    <label for="classSection">Filters:</label>
+                    <select id="classSection">
+                        <option value="">Class Section</option>
+                        <option value="1A">1A</option>
+                        <option value="1B">1B</option>
+                        <option value="1C">1C</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    <select id="status">
+                        <option value="">Status</option>
+                        <option value="Paid">Paid</option>
+                        <option value="Overdue">Overdue</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+            </div>
+            <table id="feeStatusTable">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Student ID</th>
+                        <th>Class</th>
+                        <th>Fee Type</th>
+                        <th>Total Fees</th>
+                        <th>Paid</th>
+                        <th>Outstanding</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ahmad Rizal</td>
+                        <td>001</td>
+                        <td>1A</td>
+                        <td>Tuition</td>
+                        <td>$250</td>
+                        <td>$250</td>
+                        <td>$0</td>
+                        <td>2025-01-01</td>
+                        <td>Paid</td>
+                    </tr>
+                    <tr>
+                        <td>Adam Smith</td>
+                        <td>002</td>
+                        <td>1A</td>
+                        <td>Books</td>
+                        <td>$100</td>
+                        <td>$100</td>
+                        <td>$150</td>
+                        <td>2025-01-01</td>
+                        <td>Overdue</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+
+        <a id="return-home" class="return-home" href="mainpageteacher.html">
+            <u>Return to Home</u>
+        </a>
+    </div>
+
+    <script src="/javascript/teacher-view-fee-status.js"></script>
+</body>
+</html>

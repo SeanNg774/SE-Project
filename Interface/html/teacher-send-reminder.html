@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Reminder</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/teacher-send-reminder.css">
+    <link rel="stylesheet" href="/css/save-button.css">
+    <link rel="stylesheet" href="/css/return-home-link.css">
+</head>
+<body>
+    <div class="main-border">
+        <h1>Send Reminder</h1>
+        <div class="inner-layout">
+            <form id="reminderForm">
+                <label for="recipient">Recipient (Name or Email):</label>
+                <input type="text" id="recipient" name="recipient" placeholder="Enter name or email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" class="save-button">Send Reminder</button>
+            </form>
+        </div>
+
+        <a id="return-home" class="return-home" href="mainpageteacher.html">
+            <u>Return to Home</u>
+        </a>
+    </div>
+
+    <script src="/javascript/teacher-send-reminder.js"></script>
+</body>
+</html>
