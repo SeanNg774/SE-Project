@@ -1,17 +1,9 @@
 .inner-layout{
-  display: flex;
-  justify-content: left;
-  flex-direction: column;
-  width: 400px;
-  height: 300px;
-  padding: 50px;
-  padding-bottom: 15px;
+  padding-bottom: 40px;
   padding-left: 140px;
-  text-align: left;
-  overflow-y: auto;
 }
 
-.inner-input-layout{
+form{
   display: flex;
   flex-direction: column;
   gap: 10px; 
@@ -30,34 +22,12 @@ label{
 }
 
 .save-button{
-  background-color: rgb(255, 167, 167);
-  border-width: 1.5px;
-  font-weight: 700;
   margin-top: 65px;
-
-  transition: opacity 0.15s;
-}
-
-.save-button:hover{
-  opacity: 0.8;
-}
-
-.save-button:active{
-  opacity: 0.4;
 }
 
 .return-home{
-  display: block;
-  color: rgb(0, 81, 255);
-  cursor: pointer;
-  text-align: left;
-  font-size: small;
-  margin-left: 100px;
-  margin-top: 5px;
-  
-  transition: color 0.15s;
+  margin-top: 10px;
 }
-  
-.return-home:hover{
-  color:rgb(5, 5, 207);
-}
+
+
+

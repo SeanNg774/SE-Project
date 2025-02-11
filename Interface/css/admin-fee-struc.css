@@ -1,0 +1,43 @@
+.inner-layout{
+  width: 500px;
+}
+
+h2{
+  font-size: medium;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  font-size: small;
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+button{
+  margin-top: 15px;
+  max-width: 60px;
+  margin-left: 450px;
+  background-color: rgb(228, 174, 143);
+
+  transition: opacity 0.15s;
+}
+
+button:hover{
+  opacity: 0.8;
+}
+
+button:active{
+  opacity: 0.4;
+}
+
+.hidden {
+  display: none;
+}
+
+.return-home{
+  margin-top: 20px;
+}

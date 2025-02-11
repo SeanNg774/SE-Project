@@ -4,17 +4,7 @@
 }
 
 .inner-layout{
-  display: flex;
-  justify-content: left;
-  flex-direction: column;
-  width: 400px;
-  height: 300px;
-  padding: 50px;
-  padding-bottom: 10px;
-  padding-left: 100px;
-  text-align: left;
-  overflow-y: auto;
-
+  padding-top: 20px;
 }
 
 .option-button{

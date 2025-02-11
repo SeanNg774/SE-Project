@@ -1,0 +1,14 @@
+.return-home{
+  display: block;
+  color: rgb(0, 81, 255);
+  cursor: pointer;
+  text-align: left;
+  font-size: small;
+  margin-left: 100px;
+  
+  transition: color 0.15s;
+}
+  
+.return-home:hover{
+  color:rgb(5, 5, 207);
+}

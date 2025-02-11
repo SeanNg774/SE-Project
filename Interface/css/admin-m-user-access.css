@@ -1,0 +1,28 @@
+h1{
+  font-size: large;
+}
+
+.inner-layout{
+  padding-top: 40px;
+  width: 600px;
+}
+
+.section-1{
+  padding-top: 25px;
+  padding-bottom: 40px;
+}
+
+p{
+  font-size: smaller;
+  color: rgb(53, 52, 52);
+  margin-block-start: 3px;
+  margin-block-end: 3px;
+}
+
+.option-label{
+  font-size: small;
+}
+
+.save-button{
+  margin-left: 440px;
+}
