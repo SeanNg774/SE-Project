@@ -1,0 +1,77 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.search-filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+}
+
+.filter label {
+    margin-right: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.return-home {
+    display: block;
+    text-align: center;
+    color: #007BFF;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: text-decoration 0.3s ease;
+}
+
+.return-home:hover {
+    text-decoration: underline;
+}
