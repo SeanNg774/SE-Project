@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Payment</title>
+
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/parent-make-pay.css">
+    <link rel="stylesheet" href="/css/save-button.css">
+    <link rel="stylesheet" href="/css/return-home-link.css">
+  </head>
+
+  <body>
+    <div class="main-border">
+      <h1>Make Payment</h1>
+      <div class="inner-layout">
+        <form>
+          <label for="payMethod">Choose payment method:</label>
+          <select id="payMethod">
+            <option>Card</option>
+            <option>E-Wallet</option>
+            <option>Cash</option>
+          </select>
+
+          <input type="submit" value="Pay Now">
+        </form>
+      </div>
+
+      <a id="return-home" class="return-home" href="mainpageparent.html">
+        <u>Return to Home</u>
+      </a>
+    </div>
+
+    <!-- Popup for Card & E-Wallet -->
+    <div id="card-ewallet-popup" class="popup">
+      <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <h2>Enter Payment Details</h2>
+
+        <div>
+          <label for="year">Year:</label>
+          <input type="text" id="year" placeholder="Enter year that will be payed to">
+        </div>
+        <div>
+          <label for="payAmount">Payment amount:</label>
+          <input type="text" id="payAmount" placeholder="Enter payment amount">
+        </div>
+        
+      
+        <button class="submit-payment">Submit Payment</button>
+      </div>
+    </div>
+
+    <!-- Popup for Cash -->
+    <div id="cash-popup" class="popup">
+      <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <h2>Cash Payment</h2>
+        <div>
+          <label for="payNumber">Payment ID:</label>
+          <input type="text" id="payID" placeholder="Enter payment ID">
+        </div>
+        
+        <div>
+          <label for="payAmount">Payment amount:</label>
+          <input type="text" id="payAmount" placeholder="Enter payment amount">
+        </div>
+        
+        <button class="submit-payment">Confirm</button>
+      </div>
+    </div>
+
+    <!-- Success Popup -->
+    <div id="success-popup" class="popup">
+      <div class="popup-content">
+        <h2>Payment Successful!</h2>
+        <p>Your payment has been processed successfully.</p>
+        <button id="success-popup-ok">OK</button>
+      </div>
+    </div>
+
+    <script src="/javascript/parent-make-pay.js"></script>
+  </body>
+</html>

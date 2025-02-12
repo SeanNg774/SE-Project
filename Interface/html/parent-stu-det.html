@@ -15,7 +15,30 @@
     <div class="main-border">
       <h1>Student Details</h1>
       <div class="inner-layout">
+        <div class="detail-layout">
+          <div class="parent-section">
+            <h2>Parent</h2>
 
+            <p><strong>Parent Name:</strong> <span class="editable" id="parentName"></span></p>
+            <p><strong>Email:</strong> <span class="editable" id="email"></span></p>
+            <p><strong>Contact Number:</strong> <span class="editable" id="contNumber"></span></p>
+            <p><strong>Home Address:</strong> <span class="editable" id="address"></span></p>
+            <p><strong>Relationship with student:</strong> <span class="editable" id="relStu"></span></p>
+          </div>
+
+          <div class="student-section">
+            <h2>Student</h2>
+
+            <p><strong>Student Name:</strong> <span class="editable" id="stuName"></span></p>
+            <p><strong>Class:</strong> <span class="editable" id="stuClass"></span></p>
+            <p><strong>Date of Birth:</strong> <span class="editable" id="dob"></span></p>
+          </div>
+
+          <div class="button-container">
+            <button id="edit-button" onclick="editTable()">Edit</button>
+            <button class="hidden" id="save-button" onclick="saveTable()">Save</button>
+          </div>          
+        </div>
       </div>
 
       <a id="return-home" class="return-home" href="mainpageparent.html">

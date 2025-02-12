@@ -1,0 +1,29 @@
+.inner-layout{
+  width: 600px;
+}
+
+h2{
+  font-size: large;
+  background-color: rgb(13, 61, 165);
+  color: white;
+  border-radius: 2px;
+  width: 200px;
+  padding: 5px;
+  margin: 0px;
+}
+
+span{
+  font-size: medium;
+}
+
+.notice div{
+  border: 1px solid black;
+  padding: 5px;
+  width: 470px;
+}
+
+.notice{
+  border-bottom: 3px solid black;
+  padding-bottom: 25px;
+  width: 500px;
+}

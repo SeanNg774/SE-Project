@@ -1,0 +1,15 @@
+.inner-layout{
+  width:500px
+}
+
+table{
+  border-collapse: collapse;
+}
+
+th, td{
+  border: 1px solid black;
+  font-size: small;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: left;
+}

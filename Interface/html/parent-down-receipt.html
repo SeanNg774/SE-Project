@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Receipt</title>
+
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/parent-down-receipt.css">
+    <link rel="stylesheet" href="/css/return-home-link.css">
+  </head>
+
+  <body>
+    <div class="main-border">
+      <h1>Download Receipt</h1>
+      <div class="inner-layout">
+        <form id="searchForm">
+          <label for="date">Enter Date:</label>
+          <input type="date" id="date">
+
+          <input type="submit" value="Search">
+        </form>
+
+        <table id="feeTable">
+          <thead>
+            <tr>
+              <th>Date of Payment</th>
+              <th>Payment Reference</th>
+              <th>Payment Amount</th>
+              <th>Download Receipt</th>
+            </tr>
+          </thead>
+
+          <tbody>
+              <!-- Data will be inserted here dynamically -->
+              <tr>
+                <td>2025-02-10</td>
+                <td>PAY123456</td>
+                <td>$250.00</td>
+                <td>
+                  <button onclick="downloadReceipt('2025-02-10', 'PAY123456', '250.00')">
+                    Download
+                  </button>
+                </td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <a id="return-home" class="return-home" href="mainpageparent.html">
+        <u>Return to Home</u>
+      </a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="/javascript/parent-down-receipt.js"></script>
+  </body>
+</html>

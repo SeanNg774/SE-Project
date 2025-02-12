@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Payment Activity Record</title>
+
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/parent-v-pay-act.css">
+    <link rel="stylesheet" href="/css/return-home-link.css">
+  </head>
+
+  <body>
+    <div class="main-border">
+      <h1>View Payment Activity Record</h1>
+      <div class="inner-layout">
+        <form id="searchForm">
+          <label for="date">Enter Date:</label>
+          <input type="date" id="date">
+
+          <input type="submit" value="Search">
+        </form>
+
+        <table id="feeTable">
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th>Year</th>
+              <th>Payment Reference</th>
+              <th>Payment Amount</th>
+              <th>Date of Payment</th>
+            </tr>
+          </thead>
+
+          <tbody>
+              <!-- Data will be inserted here dynamically -->
+          </tbody>
+        </table>
+      </div>
+
+      <a id="return-home" class="return-home" href="mainpageparent.html">
+        <u>Return to Home</u>
+      </a>
+    </div>
+
+    <script src="/javascript/parent-v-pay-act.js"></script>
+  </body>
+</html>

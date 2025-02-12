@@ -12,3 +12,11 @@
 .save-button:active{
   opacity: 0.4;
 }
+
+.hidden {
+  display: none;
+}
+
+.return-home{
+  margin-top: 20px;
+}
